@@ -15,7 +15,6 @@ inputBox.addEventListener("input",(e)=>{
         emptyArray = emptyArray.map((data)=>{
             return data = '<li>'+ data +'</li>';
         })
-        console.log(emptyArray);
         showSuggestions(emptyArray);
         searchContainer.classList.add("active");    // show suggestion box
         let allList = suggestionBox.querySelectorAll("li");
@@ -30,7 +29,6 @@ inputBox.addEventListener("input",(e)=>{
 
 function select(element){
     let selectUserData = element.textContent;
-    console.log(selectUserData);
     inputBox.value = selectUserData // passing user selected data in the input field
     searchContainer.classList.remove("active");
 }
